@@ -3,11 +3,18 @@ function checkPrime(num){
     return false;
     for(i=2;i<=num**0.5;i++){
         if(num%i==0){
-            return true;
+            return false;
         }
     }
     
     return true;
 }
 
-console.log(checkPrime(17))
+
+let A = checkPrime(17);
+if(A==true){
+    console.log("Prime")
+}else(
+    console.log("Not a Prime")
+)
+
