@@ -1,15 +1,15 @@
-function checkPrime(number){
-  let factors=0;
-    for(i=1;i<=number;i++){
-        if(number%i===0){
-            factors++;
+function checkPrime(num){
+  if(num < 1 || num == undefined)
+    return false;
+    for(i=2;i<=num**0.5;i++){
+        if(num%i==0){
+            return false;
         }
     }
-    if(factors==2){
-        return true;
-    }
-    return false;
+    
+    return true;
 }
+
 
 let A = checkPrime(17);
 if(A==true){
