@@ -1,15 +1,13 @@
 function checkPrime(num){
-  let count=0;
-    for(i=1;i<=num;i++){
+  if(num < 1 || num == undefined)
+    return false;
+    for(i=2;i<=num**0.5;i++){
         if(num%i==0){
-            count++;
+            return true;
         }
     }
-    if(count==2){
-        return true;
-    }
-    return false;
+    
+    return true;
 }
 
-let A = checkPrime(17)
-console.log(A)
+console.log(checkPrime(17))
